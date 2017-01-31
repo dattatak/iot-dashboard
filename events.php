@@ -1,15 +1,5 @@
 <?php
-   class MyDB extends SQLite3
-   {
-      function __construct()
-      {
-         $this->open('/db/heating.db');
-      }
-   }
-   $db = new MyDB();
-   if(!$db){
-      echo $db->lastErrorMsg();
-   }
+   $db = sqlite_open('db/heating.db');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,8 +89,8 @@
 							<tbody>
 							<?php
 								$sql = "SELECT * from events";
-								$ret = $db->query($sql);
-								while($row = $db->fetchArray(SQLITE3_ASSOC)){
+								$ret = sqlite_query($db,$sql) or die("Error in query: ". sqlite_error_string(sqlite_last_error($db)));
+								while($row = sqlite_fetch_array($ret)){
 									echo "<tr>\n";
 									echo "<td>" . $row['id'] . "</td>\n";
 									echo "<td>" . $row['type'] . "</td>\n";
