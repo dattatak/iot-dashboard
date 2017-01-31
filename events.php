@@ -73,7 +73,7 @@
           <div class="panel-heading">Heating Events<small>Control the heating via a timer</small></div>
 		<div class="panel-body">
       			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-9">
 					<div class="well">
 						<h4>Events</h4>
 						<small>What will happen next?</small>
