@@ -70,7 +70,7 @@
 		<div class="heattime"></div>
       </div>
         <div class="panel panel-default">
-          <div class="panel-heading">Heating Events<small>Control the heating via a timer</small></div>
+          <div class="panel-heading"><h4>Heating Events</h4><small>Control the heating via a timer</small></div>
 		<div class="panel-body">
       			<div class="row">
 				<div class="col-sm-12">
