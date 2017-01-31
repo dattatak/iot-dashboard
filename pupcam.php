@@ -40,8 +40,8 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/dashboard.php">Dashboard</a></li>
-        <li ><a href="/pupcam.php">DogWatch</a></li>
+        <li ><a href="/dashboard.php">Dashboard</a></li>
+        <li class="active"><a href="/pupcam.php">DogWatch</a></li>
       </ul>
     </div>
   </div>
@@ -52,8 +52,8 @@
     <div class="col-sm-3 sidenav hidden-xs">
       <h2>HOME CONTROLS</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="/dashboard.php">Dashboard</a></li>
-        <li > ><a href="/pupcam.php">DogWatch</a></li>
+        <li ><a href="/dashboard.php">Dashboard</a></li>
+        <li class="active"><a href="/pupcam.php">DogWatch</a></li>
 
       </ul><br>
     </div>
@@ -68,29 +68,19 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-            <h4>Heating</h4>
-            <p>Turn me on </p>
-		<button type='button' class='btn btn-warning' id='heatingState'>   <i class="glyphicons glyphicons-off"></i></button>
-		<div class='btn-group btn-group-sm'>
-			<button type='button' class='btn btn-success' onclick="sleeper(14400)">On </button>
-			<button type='button' class='btn btn-danger' onclick="b0OFF()">Off</button>
-		</div> 
-		<div class='btn-group btn-group-sm btn-group-vertical'>
-			<button type='button' class='btn btn-primary' onclick="sleeper(1800)">+30m</button>
-			<button type='button' class='btn btn-primary' onclick="sleeper(3600)">+60m</button>
-		</div>
-		<div class='btn-group btn-group-sm btn-group-vertical'>
-			<button type='button' class='btn btn-primary' onclick="sleeper(5400)">+90m</button>
-			<button type='button' class='btn btn-primary' onclick="sleeper(7200)">+120m</button>
-		</div>
-          </div>
-        </div>
-	<div class="col-sm-3">
-		<div class="well">
-			<h4>Time left</h4>
-			<p class="text-center alert alert-info" id="heattime" >00:00:00</p>
-		</div>
-        </div>
+            <h4>DogWatch</h4>
+          <div class="iv-embed" style="margin:0 auto;padding:0;border:0;>
+                        <div class="iv-v" style="display:block;margin:0;padding:1px;border:0;background:#000;">
+                                <iframe class="iv-i" style="display:block;margin:0;padding:0;border:0;" src="https://open.ivideon.com/embed/v2/?server=100-10e7a5225e856f6cc1751e42f43c0326&amp;camera=0&amp;width=&amp;height=&amp;lang=en" frameborder="0" allowfullscreen>
+                                </iframe>
+                        </div>
+                        <div class="iv-b" style="display:block;margin:0;padding:0;border:0;">
+                                <div style="clear:both;height:0;overflow:hidden;">&nbsp;</div>
+                                        <script src="https://open.ivideon.com/embed/v2/embedded.js"></script>
+                                </div>
+                        </div>
+                </div>
+	  </div> 
       </div>
       <div class="row">
       </div>
