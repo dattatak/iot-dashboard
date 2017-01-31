@@ -74,7 +74,7 @@
 		<div class="panel-body">
       			<div class="row">
 				<div class="col-sm-9">
-					<div class="well">
+					<div class="">
 						<h4>Events</h4>
 						<small>What will happen next?</small>
 						<table class="table table-hover">
