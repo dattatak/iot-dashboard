@@ -1,3 +1,16 @@
+<?php
+   class MyDB extends SQLite3
+   {
+      function __construct()
+      {
+         $this->open('/db/heating.db');
+      }
+   }
+   $db = new MyDB();
+   if(!$db){
+      echo $db->lastErrorMsg();
+   }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,8 +85,33 @@
       			<div class="row">
 				<div class="col-sm-3">
 					<div class="well">
-						<h4>Time left</h4>
-						<p class="text-center alert alert-info" id="heattime" >00:00:00</p>
+						<h4>Events</h4>
+						<small>What will happen next?</small>
+						<table class="table table-hover">
+							<thead>
+							 <tr>
+							  <th>id</th>
+							  <th>type</th>
+							  <th>time</th>
+							  <th>desc</th>
+							 </tr>
+							</thead>
+							<tbody>
+							<?php
+								$sql = "SELECT * from events";
+								$ret = $db->query($sql);
+								while($row = $db->fetchArray(SQLITE3_ASSOC)){
+									echo "<tr>\n";
+									echo "<td>" . $row['id'] . "</td>\n";
+									echo "<td>" . $row['type'] . "</td>\n";
+									echo "<td>" . $row['time'] . "</td>\n";
+									echo "<td>" . $row['desc'] . "</td>\n";
+									echo "</tr>\n";
+								}
+								$db->close();
+							?>
+							</tbody>
+						</table>
 					</div>
         			</div>
 			</div>

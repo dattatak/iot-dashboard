@@ -42,6 +42,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="/dashboard.php">Dashboard</a></li>
         <li ><a href="/pupcam.php">DogWatch</a></li>
+        <li ><a href="/events.php">Events</a></li>
       </ul>
     </div>
   </div>
@@ -53,8 +54,8 @@
       <h2>HOME CONTROLS</h2>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="/dashboard.php">Dashboard</a></li>
-        <li > ><a href="/pupcam.php">DogWatch</a></li>
-
+        <li ><a href="/pupcam.php">DogWatch</a></li>
+        <li ><a href="/events.php">Events</a></li>
       </ul><br>
     </div>
     <br>
