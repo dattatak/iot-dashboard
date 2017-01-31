@@ -1,5 +1,5 @@
 <?php
-   $db = sqlite_open('db/heating.db');
+   $db = new PDO('sqlite:db/heating.db');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,8 +89,7 @@
 							<tbody>
 							<?php
 								$sql = "SELECT * from events";
-								$ret = sqlite_query($db,$sql) or die("Error in query: ". sqlite_error_string(sqlite_last_error($db)));
-								while($row = sqlite_fetch_array($ret)){
+								foreach ($db->query($sql) as $row){
 									echo "<tr>\n";
 									echo "<td>" . $row['id'] . "</td>\n";
 									echo "<td>" . $row['type'] . "</td>\n";
@@ -98,7 +97,6 @@
 									echo "<td>" . $row['desc'] . "</td>\n";
 									echo "</tr>\n";
 								}
-								$db->close();
 							?>
 							</tbody>
 						</table>
